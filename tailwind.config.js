@@ -4,7 +4,11 @@ export default {
   theme: {
     extend: {
       //fontFamily: { jacquard: "Jacquard 12 Charted", montserrat: "Montserrat" },
-      fontFamily: { matemasie: "Matemasie" },
+      fontFamily: { matemasie: "Matemasie", gabarito: "Gabarito" },
+      scrollBehavior: ["smooth"],
+      colors: {
+        jjgreen: "#b0f2b6",
+      },
     },
   },
   plugins: [],
