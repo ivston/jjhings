@@ -17,7 +17,7 @@ const Navbar = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 px-6 py-4">
+    <nav className="w-full fixed top-0 left-0 z-50 px-6 py-4 bg-yellow-50">
       <div className="flex justify-between items-center w-full">
         {/* Logo (visible when NOT on landing) */}
         <div className="w-[150px]">
@@ -71,26 +71,12 @@ const Navbar = ({
           isMenuOpen ? "max-h-40 opacity-100 mt-4" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="flex flex-col gap-4 font-gabrito font-bold text-pink-400 text-lg bg-white p-4">
-          {!isLandingInView && (
-            <a
-              href="#landing"
-              className="block w-[150px] h-auto"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <img
-                src={jjHingsBannerLogo}
-                alt="JJ Hings Logo"
-                className="w-full h-auto"
-              />
-            </a>
-          )}
-
+        <div className="flex flex-col gap-4 font-gabrito font-bold text-pink-400 text-lg bg-yellow-50 p-4">
           <a href="#about" onClick={() => setIsMenuOpen(false)}>
-            About Us
+            About Us 🔎
           </a>
           <a href="#flavourGraveyardPage" onClick={() => setIsMenuOpen(false)}>
-            Flavour Graveyard
+            Flavour Graveyard 🪦🍦🧟‍♂️
           </a>
         </div>
       </div>

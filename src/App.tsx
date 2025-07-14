@@ -33,7 +33,7 @@ function App() {
           <LandingPage />
         </section>
 
-        <section ref={aboutRef} id="about" className="min-h-screen pt-8">
+        <section ref={aboutRef} id="about" className="min-h-screen">
           <AboutPage />
         </section>
 

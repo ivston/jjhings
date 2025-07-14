@@ -17,7 +17,7 @@ const LandingPage: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-pink-300
-            text-gray-700"
+            text-amber-700"
           >
             46 Rue Bichat, 75010 Paris
           </a>
@@ -25,13 +25,13 @@ const LandingPage: React.FC = () => {
         <div className="flex flex-col gap-4 text-2xl text-center">
           <div className="flex justify-between gap-10">
             <div className="font-bold ">Thursday to Saturday</div>
-            <div className="text-gray-700">2pm - 10pm</div>
+            <div className="text-amber-700">2pm - 10pm</div>
           </div>
           <div className="flex justify-between gap-10">
             <div className="font-bold">Sunday</div>
-            <div className="text-gray-700">1pm - 8pm</div>
+            <div className="text-amber-700">1pm - 8pm</div>
           </div>
-          <p className="text-2xl pt-6 text-gray-700 font-bold">
+          <p className="text-2xl pt-6 text-amber-700 font-bold">
             Closed Mondays, Tuesdays and Wednesdays
           </p>
         </div>

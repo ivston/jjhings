@@ -4,3 +4,8 @@ html {
 body {
   @apply bg-yellow-50;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
