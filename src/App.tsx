@@ -5,6 +5,7 @@ import FlavourGraveyeardPage from "./pages/FlavourGraveyardPage";
 import AboutPage from "./pages/AboutPage";
 import Navbar from "./components/Navbar";
 import useSectionInView from "./hooks/useSectionInView";
+import Footer from "./components/Footer";
 
 function App() {
   // Create refs for each section
@@ -45,6 +46,7 @@ function App() {
           <FlavourGraveyeardPage />
         </section>
       </div>
+      <Footer />
     </>
   );
 }

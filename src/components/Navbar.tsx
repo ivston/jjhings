@@ -17,7 +17,7 @@ const Navbar = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 px-6 py-4 bg-yellow-50">
+    <nav className="w-full fixed top-0 left-0 z-50 px-6 py-4 bg-yellow-50 ">
       <div className="flex justify-between items-center w-full">
         {/* Logo (visible when NOT on landing) */}
         <div className="w-[150px]">
