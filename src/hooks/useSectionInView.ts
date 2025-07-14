@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 const useSectionInView = (id: string) => {
-  const [isInView, setIsInView] = useState(true);
+  const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
     const element = document.getElementById(id);

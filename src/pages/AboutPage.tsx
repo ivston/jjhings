@@ -5,11 +5,11 @@ const AboutPage: React.FC = () => {
   return (
     <div className="pt-10 px-6 md:px-36 lg:flex lg:flex-row lg:justify-center lg:items-center lg:gap-10 min-h-[calc(100vh-75px)]">
       <img
-        className="w-full lg:w-1/3 max-h-[300px] lg:max-h-none object-contain mb-6 lg:mb-0 rounded"
+        className="w-full lg:w-1/3 max-h-[300px] lg:max-h-none object-contain mb-6 lg:mb-0 rounded-lg"
         src={scoopingImage}
         alt="Julia scooping ice cream"
       />
-      <div className="lg:ml-10 flex-1">
+      <div className="lg:ml-10 flex-1 text-gray-700 text-xl">
         <p className="p-5 max-w-3xl text-left">Hello!</p>
         <p className="p-5 max-w-3xl text-left">
           I'm Julia, Chef/Owner/One Woman Show of JJ HINGS, a Pastry Chef/Ice

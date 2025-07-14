@@ -8,32 +8,41 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isLandingInView = useSectionInView("landing");
   const isAboutInView = useSectionInView("about");
+  const isFlavourGraveyardInView = useSectionInView("flavourGraveyardPage");
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 bg-white px-6 py-4">
-      <div className="flex justify-between items-center">
-        {/* Brand Logo */}
-        {!isLandingInView && (
-          <div className="flex justify-center w-full">
-            <a href="#landing" className="block w-[150px] h-auto">
+    <nav className="w-full fixed top-0 left-0 z-50 px-6 py-4">
+      <div className="flex justify-between items-center w-full">
+        {/* Logo (visible when not on landing) */}
+        <div className="w-[150px]">
+          {!isLandingInView && (
+            <a href="#landing" className="block w-full h-auto">
               <img
                 src={jjHingsBannerLogo}
                 alt="JJ Hings Logo"
                 className="w-full h-auto"
               />
             </a>
-          </div>
-        )}
+          )}
+        </div>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex gap-6 font-gabrito font-bold text-pink-400 text-xl">
-          {!isAboutInView && <a href="#about">About Us</a>}
+          {!isAboutInView && (
+            <li>
+              <a href="#about">About Us</a>
+            </li>
+          )}
+          {!isFlavourGraveyardInView && (
+            <li>
+              <a href="#flavourGraveyardPage">Flavour Graveyard</a>
+            </li>
+          )}
         </ul>
 
-        {/* Burger Icon - Mobile only, hidden on About section */}
-        {!isAboutInView && (
+        {/* Mobile Burger Menu Button - always visible */}
+        <div className="md:hidden">
           <button
-            className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -43,10 +52,10 @@ const Navbar = () => {
               className="h-8 w-8"
             />
           </button>
-        )}
+        </div>
       </div>
 
-      {/* Mobile Dropdown Menu with Slide Effect */}
+      {/* Mobile Dropdown Menu */}
       <div
         className={`transition-all duration-300 ease-in-out overflow-hidden md:hidden ${
           isMenuOpen ? "max-h-40 opacity-100 mt-4" : "max-h-0 opacity-0"
@@ -66,11 +75,13 @@ const Navbar = () => {
               />
             </a>
           )}
-          {!isAboutInView && (
-            <a href="#about" onClick={() => setIsMenuOpen(false)}>
-              About Us
-            </a>
-          )}
+
+          <a href="#about" onClick={() => setIsMenuOpen(false)}>
+            About Us
+          </a>
+          <a href="#flavourGraveyardPage" onClick={() => setIsMenuOpen(false)}>
+            Flavour Graveyard
+          </a>
         </div>
       </div>
     </nav>

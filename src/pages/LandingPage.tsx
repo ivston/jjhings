@@ -16,22 +16,24 @@ const LandingPage: React.FC = () => {
             href="https://maps.app.goo.gl/rvcfsFFgcFWmkgUq7"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-pink-500"
+            className="hover:text-pink-300
+            text-gray-700"
           >
             46 Rue Bichat, 75010 Paris
           </a>
         </address>
-
         <div className="flex flex-col gap-4 text-2xl text-center">
           <div className="flex justify-between gap-10">
-            <div className="font-bold">Thursday to Saturday</div>
-            <div>2pm - 10pm</div>
+            <div className="font-bold ">Thursday to Saturday</div>
+            <div className="text-gray-700">2pm - 10pm</div>
           </div>
           <div className="flex justify-between gap-10">
             <div className="font-bold">Sunday</div>
-            <div>1pm - 8pm</div>
+            <div className="text-gray-700">1pm - 8pm</div>
           </div>
-          <p className="text-2xl pt-6">Closed on Mondays and Tuesdays</p>
+          <p className="text-2xl pt-6 text-gray-700 font-bold">
+            Closed Mondays, Tuesdays and Wednesdays
+          </p>
         </div>
       </div>
     </div>
