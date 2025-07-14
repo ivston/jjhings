@@ -1,22 +1,32 @@
 import { useState } from "react";
-import useSectionInView from "../hooks/useSectionInView";
 import menuIcon from "../assets/burger-menu-svgrepo-com.svg";
 import closeIcon from "../assets/close-md-svgrepo-com.svg";
 import jjHingsBannerLogo from "../assets/jjhingsstraightbannerlogo.png";
 
-const Navbar = () => {
+interface NavbarProps {
+  isLandingInView: boolean;
+  isAboutInView: boolean;
+  isFlavourGraveyardInView: boolean;
+}
+
+const Navbar = ({
+  isLandingInView,
+  isAboutInView,
+  isFlavourGraveyardInView,
+}: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isLandingInView = useSectionInView("landing");
-  const isAboutInView = useSectionInView("about");
-  const isFlavourGraveyardInView = useSectionInView("flavourGraveyardPage");
 
   return (
     <nav className="w-full fixed top-0 left-0 z-50 px-6 py-4">
       <div className="flex justify-between items-center w-full">
-        {/* Logo (visible when not on landing) */}
+        {/* Logo (visible when NOT on landing) */}
         <div className="w-[150px]">
           {!isLandingInView && (
-            <a href="#landing" className="block w-full h-auto">
+            <a
+              href="#landing"
+              className="block w-full h-auto"
+              onClick={() => setIsMenuOpen(false)}
+            >
               <img
                 src={jjHingsBannerLogo}
                 alt="JJ Hings Logo"
