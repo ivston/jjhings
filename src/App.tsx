@@ -6,6 +6,7 @@ import AboutPage from "./pages/AboutPage";
 import Navbar from "./components/Navbar";
 import useSectionInView from "./hooks/useSectionInView";
 import Footer from "./components/Footer";
+// import DripScreen from "./components/DripScreen";
 
 function App() {
   // Create refs for each section
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <>
+      {/* <DripScreen /> */}
       {/* Navbar is fixed at the top */}
       <Navbar
         isLandingInView={isLandingInView}
